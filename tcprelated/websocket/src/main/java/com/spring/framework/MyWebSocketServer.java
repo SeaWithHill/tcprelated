@@ -1,4 +1,4 @@
-package main.java.com.spring.framework;
+package spring.framework;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -33,6 +33,12 @@ public class MyWebSocketServer extends WebSocketServer {
     @Override
     public void onError(WebSocket conn, Exception ex) {
         ex.printStackTrace();
+    }
+
+    @Override
+    public void onStart() {
+        System.out.println("websocket server start " );
+
     }
 
     public static void main(String[] args) {
